@@ -1,13 +1,16 @@
-//---------------Solution to the problem number-1---------------
+/* ------------------------------------
+Solution to the problem number-1
+------------------------------------ */
 
 function seerToMon(seer) {
-  //validation for Negative value!
+  //Error validation for Negative value!
   if (seer <= 0) {
     return "Please! Enter a Positive value greater than 0";
   }
-  //validation for Type!
+  //Error validation for Type!
   else if (typeof seer != "number") {
     return "Please! Enter Numeric value only";
+    asa;
   }
   //Calculation of Mon From Seer..
   const perMonToSeer = 40;
@@ -15,18 +18,18 @@ function seerToMon(seer) {
   return mon;
 }
 
-/* let testSeer = 400;
-const testResult = seerToMon(testSeer);
-console.log(testResult); */
+// console.log(seerToMon(400));
 
-//-----------------Solution to the problem no-2-----------------
+/* ------------------------------
+Solution to the problem no-2
+--------------------------------- */
 
 function totalSales(shirtQuantity, pentQuantity, shoeQuantity) {
-  //validation for Negative value!
+  //Error validation for Negative value!
   if (shirtQuantity < 0 || pentQuantity < 0 || shoeQuantity < 0) {
     return "Please! Enter a Positive value";
   }
-  //validation for Type!
+  //Error validation for Type!
   else if (
     typeof shirtQuantity != "number" ||
     typeof pentQuantity != "number" ||
@@ -34,7 +37,7 @@ function totalSales(shirtQuantity, pentQuantity, shoeQuantity) {
   ) {
     return "Please! Enter Numeric value only";
   }
-  //validation for floating value!
+  //Error validation for floating value!
   else if (
     Number.isInteger(shirtQuantity) != true ||
     Number.isInteger(pentQuantity) != true ||
@@ -60,18 +63,20 @@ function totalSales(shirtQuantity, pentQuantity, shoeQuantity) {
 
 // console.log(totalSales(1, 1, 1));
 
-//-------------------Solution to the problem no-3---------------------
+/* --------------------------------
+   Solution to the problem no-3
+-------------------------------- */
 
 function deliveryCost(tShirtQuantity) {
-  //validation for Negative value!
+  //Error validation for Negative value!
   if (tShirtQuantity <= 0) {
     return "Please! Enter a Positive value greater than 0";
   }
-  //validation for Type!
+  //Error validation for Type!
   else if (typeof tShirtQuantity != "number") {
     return "Please! Enter Numeric value only";
   }
-  //validation for Floating number!
+  //Error validation for Floating number!
   else if (Number.isInteger(tShirtQuantity) != true) {
     return "Please! Enter an Integer value";
   }
@@ -106,20 +111,22 @@ function deliveryCost(tShirtQuantity) {
 
 // console.log(deliveryCost(300));
 
-//----------------------Solution to the problem- 4--------------------------
+/* ------------------------------
+  Solution to the problem- 4
+-------------------------------- */
 
 function perfectFriend(Arr) {
-  //validation for Type...
+  //Error validation for Type...
   if (typeof Arr != "object") {
     return "Please! Enter an Array..";
   }
-  //validation for Blank Array!!
+  //Error validation for Blank Array!!
   else if (Arr.length <= 0) {
-    return "Please Enter Some Elements in array";
+    return "Please Enter Some Elements in array, your array is blank!";
   }
   let friend = [];
   for (const element of Arr) {
-    //validation for String value in array
+    //Error validation for String value in array
     if (typeof element != "string") {
       return "Please! Enter String value in array";
     }
