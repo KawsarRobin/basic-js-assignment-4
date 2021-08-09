@@ -9,10 +9,6 @@ function seerToMon(seer) {
   else if (typeof seer != "number") {
     return "Please! Enter Numeric value only";
   }
-  //validation for Floating number!
-  else if (Number.isInteger(seer) != true) {
-    return "Please! Enter an Integer value";
-  }
   //Calculation of Mon From Seer..
   const perMonToSeer = 40;
   const mon = seer / perMonToSeer;
@@ -37,7 +33,9 @@ function totalSales(shirtQuantity, pentQuantity, shoeQuantity) {
     typeof shoeQuantity != "number"
   ) {
     return "Please! Enter Numeric value only";
-  } else if (
+  }
+  //validation for floating value!
+  else if (
     Number.isInteger(shirtQuantity) != true ||
     Number.isInteger(pentQuantity) != true ||
     Number.isInteger(shoeQuantity) != true
